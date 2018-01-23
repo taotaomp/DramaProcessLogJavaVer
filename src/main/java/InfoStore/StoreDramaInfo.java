@@ -11,6 +11,12 @@ public class StoreDramaInfo implements ConstValues {
     private File file = null;
     private List<String> dramaInfo = new ArrayList<String>();
 
+    /**
+     * 创建StoreDramaInfo对象唯一实例
+     * @param dramaInfo
+     * @return 此对象
+     * @throws IOException
+     */
     public static StoreDramaInfo getInstance(List<String> dramaInfo) throws IOException {
         StoreDramaInfo storeDramaInfo = new StoreDramaInfo();
 
@@ -23,6 +29,10 @@ public class StoreDramaInfo implements ConstValues {
         return storeDramaInfo;
     }
 
+    /**
+     * 存储番剧信息
+     * @throws IOException
+     */
     public void storeDramaInfo() throws IOException {
         FileWriter fileWriter = new FileWriter(file);
         BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
