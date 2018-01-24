@@ -4,7 +4,7 @@ public interface ConstValues {
     /**
      * 信息文件路径
      */
-    String FILE_PATH = "";
+    String FILE_PATH = "/home/papudding/文档/DramaProcessLogJavaVer/Data/dramaInfo";
     /**
      * 日志配置路径
      */

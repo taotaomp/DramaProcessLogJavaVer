@@ -1,18 +1,49 @@
 package UIFrame;
 
+import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
+import java.awt.image.BufferedImage;
 import java.io.File;
+import java.io.IOException;
 
 public class LoadedContentPanel extends ContentPanel {
 
-    private JButton button_DStart = new JButton("开始追番喵");
-    private JButton button_DDelete = new JButton("删除");
-    private JButton button_AllProgressAdd = new JButton("+1s");
-    private JButton button_AllProgressMinus = new JButton("-1s");
-    private JButton button_NowProgressAdd = new JButton("+1s");
-    private JButton button_NowProgressMinus = new JButton("-1s");
-    private String DUrl;
+    public Button getButton_DStart() {
+        return button_DStart;
+    }
+
+    public Button getButton_DDelete() {
+        return button_DDelete;
+    }
+
+    public Button getButton_AllProgressAdd() {
+        return button_AllProgressAdd;
+    }
+
+    public Button getButton_AllProgressMinus() {
+        return button_AllProgressMinus;
+    }
+
+    public Button getButton_NowProgressAdd() {
+        return button_NowProgressAdd;
+    }
+
+    public Button getButton_NowProgressMinus() {
+        return button_NowProgressMinus;
+    }
+
+    public String getDUrl() {
+        return DUrl;
+    }
+
+    private Button button_DStart = new Button("开始追番喵");
+    private Button button_DDelete = new Button("删除");
+    private Button button_AllProgressAdd = new Button("+1s");
+    private Button button_AllProgressMinus = new Button("-1s");
+    private Button button_NowProgressAdd = new Button("+1s");
+    private Button button_NowProgressMinus = new Button("-1s");
+    private String DUrl = null;
 
     public LoadedContentPanel() {
         super(true);
@@ -21,6 +52,7 @@ public class LoadedContentPanel extends ContentPanel {
 
         setComponentsBounds();
         addComponents();
+        setComponetsFonts();
     }
 
     private void setComponentsBounds(){
@@ -41,17 +73,43 @@ public class LoadedContentPanel extends ContentPanel {
         this.add(button_NowProgressMinus);
     }
 
+    private void setComponetsFonts(){
+        Font font = new Font("宋体",0,12);
+        this.button_AllProgressAdd.setFont(font);
+        this.button_AllProgressMinus.setFont(font);
+        this.button_NowProgressAdd.setFont(font);
+        this.button_NowProgressMinus.setFont(font);
+        this.button_DStart.setFont(font);
+        this.button_DDelete.setFont(font);
+    }
+
     public void loadDramaInfoIntoPanel(String singleDramaInfo){
-        String temp[] = singleDramaInfo.split("#");
+        String temp[] = new String[5];
+        for(int i = 0 ;i<temp.length ;i++){
+            if(i<singleDramaInfo.split("#").length){
+                temp[i] = singleDramaInfo.split("#")[i];
+            }
+            else {
+                temp[i] = " ";
+            }
+        }
+
         this.txtF_DName.setText(temp[0]);
         this.txtF_DProgressAll.setText(temp[1]);
         this.txtF_DProgressNow.setText(temp[2]);
         this.panel_DPicture.setPicFile(new File(temp[3]));
         this.DUrl = temp[4];
+
+        this.panel_DPicture.repaint();
     }
 
     @Override
     public void print(Graphics g) {
-        super.print(g);
+        try {
+            BufferedImage bufferedImage = ImageIO.read(new File(CONTENT_BACKGROUND_PIC_PATH));
+            g.drawImage(bufferedImage,0,0, null);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }

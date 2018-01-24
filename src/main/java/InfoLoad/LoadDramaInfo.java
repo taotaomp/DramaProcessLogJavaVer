@@ -8,6 +8,11 @@ import java.util.List;
 
 public class LoadDramaInfo implements ConstValues {
     private File file = null;
+
+    public List<String> getDramaInfo() {
+        return dramaInfo;
+    }
+
     private List<String> dramaInfo = new ArrayList<String>();
 
     /**

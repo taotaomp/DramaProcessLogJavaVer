@@ -5,6 +5,8 @@ import Const.ConstValues;
 import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
@@ -25,7 +27,7 @@ public abstract class ContentPanel extends JPanel implements ConstValues{
      * @param b 指示是否为有内容窗口
      */
     public ContentPanel(boolean b){
-        panel_DPicture = new PicPanel(b);
+        panel_DPictureConfig(b);
         setComponentsBounds();
         addComponents();
         this.setLayout(null);
@@ -78,5 +80,32 @@ public abstract class ContentPanel extends JPanel implements ConstValues{
         this.add(txtF_DProgressAll);
         this.add(txtF_DProgressNow);
         this.add(panel_DPicture);
+    }
+
+    private void panel_DPictureConfig(boolean b){
+        panel_DPicture = new PicPanel(b);
+        if(!b) {
+            panel_DPicture.addMouseListener(new MouseListener() {
+                public void mouseClicked(MouseEvent e) {
+                    JFileChooser jFileChooser = new JFileChooser();
+                    if (jFileChooser.showOpenDialog(null) == JFileChooser.APPROVE_OPTION) {
+                        panel_DPicture.setPicFile(jFileChooser.getSelectedFile());
+                        panel_DPicture.repaint(300);
+                    }
+                }
+
+                public void mousePressed(MouseEvent e) {
+                }
+
+                public void mouseReleased(MouseEvent e) {
+                }
+
+                public void mouseEntered(MouseEvent e) {
+                }
+
+                public void mouseExited(MouseEvent e) {
+                }
+            });
+        }
     }
 }
