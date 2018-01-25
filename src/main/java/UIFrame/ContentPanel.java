@@ -11,6 +11,10 @@ import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 
+/**
+ * 内容容器，定制化
+ * 包含两种内容容器中都有的基本内容
+ */
 public abstract class ContentPanel extends JPanel implements ConstValues{
     protected JLabel label_DName = new JLabel("番剧名称");
     protected JLabel label_DProgressAll = new JLabel("番剧总进度");
@@ -27,7 +31,7 @@ public abstract class ContentPanel extends JPanel implements ConstValues{
      * @param b 指示是否为有内容窗口
      */
     public ContentPanel(boolean b){
-        panel_DPictureConfig(b);
+        panel_DPicture = new PicPanel(b);
         setComponentsBounds();
         addComponents();
         this.setLayout(null);
@@ -72,6 +76,9 @@ public abstract class ContentPanel extends JPanel implements ConstValues{
         this.panel_DPicture.setBounds(380,21,135,161);
     }
 
+    /**
+     * 将各个控件添加到容器中
+     */
     private void addComponents(){
         this.add(label_DName);
         this.add(label_DProgressAll);
@@ -80,32 +87,5 @@ public abstract class ContentPanel extends JPanel implements ConstValues{
         this.add(txtF_DProgressAll);
         this.add(txtF_DProgressNow);
         this.add(panel_DPicture);
-    }
-
-    private void panel_DPictureConfig(boolean b){
-        panel_DPicture = new PicPanel(b);
-        if(!b) {
-            panel_DPicture.addMouseListener(new MouseListener() {
-                public void mouseClicked(MouseEvent e) {
-                    JFileChooser jFileChooser = new JFileChooser();
-                    if (jFileChooser.showOpenDialog(null) == JFileChooser.APPROVE_OPTION) {
-                        panel_DPicture.setPicFile(jFileChooser.getSelectedFile());
-                        panel_DPicture.repaint(300);
-                    }
-                }
-
-                public void mousePressed(MouseEvent e) {
-                }
-
-                public void mouseReleased(MouseEvent e) {
-                }
-
-                public void mouseEntered(MouseEvent e) {
-                }
-
-                public void mouseExited(MouseEvent e) {
-                }
-            });
-        }
     }
 }

@@ -17,4 +17,8 @@ public interface ConstValues {
      * list背景图片路径
      */
     String LIST_BACKGROUND_PIC_PATH = "/home/papudding/图片/DPLJV/bg10.jpg";
+    /**
+     * 浏览器名
+     */
+    String BROWSER_NAME = "google-chrome";
 }

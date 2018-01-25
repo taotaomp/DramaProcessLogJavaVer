@@ -7,6 +7,10 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
+/**
+ * 存储番剧工具，将番剧存储在本地文件中
+ * 通过getInstance(List<String> dramaInfo)将此类实例化
+ */
 public class StoreDramaInfo implements ConstValues {
     private File file = null;
     private List<String> dramaInfo = new ArrayList<String>();
@@ -34,7 +38,7 @@ public class StoreDramaInfo implements ConstValues {
      * @throws IOException
      */
     public void storeDramaInfo() throws IOException {
-        FileWriter fileWriter = new FileWriter(file);
+        FileWriter fileWriter = new FileWriter(file,false);
         BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
 
         Iterator<String> iterator = dramaInfo.iterator();

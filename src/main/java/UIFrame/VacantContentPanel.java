@@ -9,6 +9,9 @@ import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 
+/**
+ * 空数据内容，内容容器
+ */
 public class VacantContentPanel extends ContentPanel {
 
     private JLabel label_DURL = new JLabel("番剧地址喵");
@@ -70,7 +73,6 @@ public class VacantContentPanel extends ContentPanel {
         this.add(button_Confirm);
         this.add(button_Cancel);
     }
-
 
     @Override
     public void print(Graphics g) {

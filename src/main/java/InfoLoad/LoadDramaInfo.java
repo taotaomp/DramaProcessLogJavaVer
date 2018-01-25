@@ -6,6 +6,11 @@ import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * 番剧信息加载器，通过getInstance实例化
+ * 将番剧信息装载到List<String>中
+ * 通过getDramaInfo()获取装有番剧信息的List对象
+ */
 public class LoadDramaInfo implements ConstValues {
     private File file = null;
 

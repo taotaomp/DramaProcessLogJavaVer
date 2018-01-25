@@ -27,8 +27,10 @@ public class PicPanel extends JPanel {
      * @param b 指示是否为有内容窗口
      */
     public PicPanel(boolean b){
+        picFile=new File("");
         if(!b) {
             this.setBackground(Color.white);
+            addMouseAction();
         }
     }
 
@@ -40,6 +42,35 @@ public class PicPanel extends JPanel {
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    private void addMouseAction(){
+        this.addMouseListener(new MouseListener() {
+            public void mouseClicked(MouseEvent e) {
+                PicPanel temp = (PicPanel)e.getSource();
+                JFileChooser jFileChooser = new JFileChooser();
+                if (jFileChooser.showOpenDialog(null) == JFileChooser.APPROVE_OPTION) {
+                    temp.setPicFile(jFileChooser.getSelectedFile());
+                    temp.repaint(300);
+                }
+            }
+
+            public void mousePressed(MouseEvent e) {
+
+            }
+
+            public void mouseReleased(MouseEvent e) {
+
+            }
+
+            public void mouseEntered(MouseEvent e) {
+
+            }
+
+            public void mouseExited(MouseEvent e) {
+
+            }
+        });
     }
 
 }

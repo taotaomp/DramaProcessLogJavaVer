@@ -1,5 +1,9 @@
 package UIFrame;
 
+import Activity.MainActivity;
+import org.apache.log4j.Priority;
+import sun.security.x509.X500Name;
+
 import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
@@ -37,13 +41,25 @@ public class LoadedContentPanel extends ContentPanel {
         return DUrl;
     }
 
+    public String getSingleDramaInfoRegister() {
+        return singleDramaInfoRegister;
+    }
+
+    public JProgressBar getProgressBar_NowProgress() {
+        return progressBar_NowProgress;
+    }
+
     private Button button_DStart = new Button("开始追番喵");
-    private Button button_DDelete = new Button("删除");
+    private Button button_DDelete = new Button("删\n除");
     private Button button_AllProgressAdd = new Button("+1s");
     private Button button_AllProgressMinus = new Button("-1s");
     private Button button_NowProgressAdd = new Button("+1s");
     private Button button_NowProgressMinus = new Button("-1s");
     private String DUrl = null;
+
+    private String singleDramaInfoRegister; //单个整条番剧信息暂存器
+
+    private JProgressBar progressBar_NowProgress = new JProgressBar();
 
     public LoadedContentPanel() {
         super(true);
@@ -62,6 +78,7 @@ public class LoadedContentPanel extends ContentPanel {
         this.button_AllProgressMinus.setBounds(260,95,31,31);
         this.button_NowProgressAdd.setBounds(314,317,31,31);
         this.button_NowProgressMinus.setBounds(374,317,31,31);
+        this.progressBar_NowProgress.setBounds(34,292,371,19);
     }
 
     private void addComponents(){
@@ -71,6 +88,7 @@ public class LoadedContentPanel extends ContentPanel {
         this.add(button_AllProgressMinus);
         this.add(button_NowProgressAdd);
         this.add(button_NowProgressMinus);
+        this.add(progressBar_NowProgress);
     }
 
     private void setComponetsFonts(){
@@ -80,10 +98,49 @@ public class LoadedContentPanel extends ContentPanel {
         this.button_NowProgressAdd.setFont(font);
         this.button_NowProgressMinus.setFont(font);
         this.button_DStart.setFont(font);
-        this.button_DDelete.setFont(font);
+        this.button_DDelete.setFont(new Font("宋体",0,9));
     }
 
+    private void setProgressBarInitial(){
+        this.progressBar_NowProgress.setMaximum(Integer.parseInt(this.txtF_DProgressAll.getText()));
+        this.progressBar_NowProgress.setMinimum(1);
+        this.progressBar_NowProgress.setValue(Integer.parseInt(this.txtF_DProgressNow.getText()));
+        this.progressBar_NowProgress.setString(this.txtF_DName.getText());
+    }
+
+    public void addAllProgress(){
+        Integer i = Integer.parseInt(txtF_DProgressAll.getText());
+        i++;
+        txtF_DProgressAll.setText(i.toString());
+        progressBar_NowProgress.setMaximum(i);
+        MainActivity.loggerRun.getLogger().info(txtF_DName.getText()+" 总进度+1");
+    }
+    public void minusAllProgress(){
+        Integer i = Integer.parseInt(txtF_DProgressAll.getText());
+        i--;
+        txtF_DProgressAll.setText(i.toString());
+        progressBar_NowProgress.setMaximum(i);
+        MainActivity.loggerRun.getLogger().info(txtF_DName.getText()+" 总进度-1");
+    }
+    public void addNowProgress(){
+        Integer i = Integer.parseInt(txtF_DProgressNow.getText());
+        i++;
+        txtF_DProgressNow.setText(i.toString());
+        progressBar_NowProgress.setValue(i);
+        MainActivity.loggerRun.getLogger().info(txtF_DName.getText()+" 观看进度+1");
+    }
+    public void minusNowProgress(){
+        Integer i = Integer.parseInt(txtF_DProgressNow.getText());
+        i--;
+        txtF_DProgressNow.setText(i.toString());
+        progressBar_NowProgress.setValue(i);
+        MainActivity.loggerRun.getLogger().info(txtF_DName.getText()+" 观看进度-1");
+    }
+
+
+
     public void loadDramaInfoIntoPanel(String singleDramaInfo){
+        singleDramaInfoRegister = singleDramaInfo;
         String temp[] = new String[5];
         for(int i = 0 ;i<temp.length ;i++){
             if(i<singleDramaInfo.split("#").length){
@@ -101,6 +158,8 @@ public class LoadedContentPanel extends ContentPanel {
         this.DUrl = temp[4];
 
         this.panel_DPicture.repaint();
+
+        setProgressBarInitial();        //初始化进度条
     }
 
     @Override

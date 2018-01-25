@@ -1,19 +1,20 @@
 package UIFrame;
 
+import Const.ConstValues;
 import InfoLoad.LoadDramaInfo;
 import InfoStore.StoreDramaInfo;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.awt.event.MouseEvent;
-import java.awt.event.MouseListener;
+import java.awt.event.*;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MainFrame extends JFrame {
+/**
+ * 主窗体
+ */
+public class MainFrame extends JFrame implements ConstValues {
     private Container container;
     private ListPanel listPanel;
     private LoadedContentPanel loadedContentPanel;
@@ -23,8 +24,12 @@ public class MainFrame extends JFrame {
     private List<String> dramaInfo = new ArrayList<String>();
 
 
-    public MainFrame(){
+    /**
+     * 构造方法
+     */
+    public MainFrame() {
         container = this.getContentPane();
+        container.setBackground(Color.yellow);
         try {
             loadDramaInfo = LoadDramaInfo.getInstance();
             loadDramaInfo.loadDramaInfo();
@@ -37,17 +42,21 @@ public class MainFrame extends JFrame {
         buildListPanel(dramaInfo);
     }
 
-    private void frameConfig(){
+    /**
+     * 窗体配置
+     */
+    private void frameConfig() {
         this.setVisible(true);
         this.setLayout(null);
         Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
-        this.setBounds(screenSize.width/2-410,screenSize.height/2-193,820,386);
+        this.setBounds(screenSize.width / 2 - 410, screenSize.height / 2 - 193, 820, 386);
         this.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
     }
 
-    public void buildLoadedContentPanel(String singleDInfo){
+    public void buildLoadedContentPanel(String singleDInfo) {
         loadedContentPanel = new LoadedContentPanel();
-        loadedContentPanel.setBounds(211,0,610,386);
+        loadedContentPanel.setBackground(Color.cyan);
+        loadedContentPanel.setBounds(211, 0, 610, 386);
         loadedContentPanel.setVisible(true);
         loadedContentPanel.loadDramaInfoIntoPanel(singleDInfo);
         container.add(loadedContentPanel);
@@ -55,7 +64,12 @@ public class MainFrame extends JFrame {
         loadedContentPanel.getButton_DStart().addMouseListener(new MouseListener() {
             public void mouseClicked(MouseEvent e) {
                 try {
-                    Runtime.getRuntime().exec("google-chrome "+loadedContentPanel.getDUrl());
+                    if (loadedContentPanel.getDUrl().contains("http")) {
+                        Runtime.getRuntime().exec(BROWSER_NAME + " " + loadedContentPanel.getDUrl());
+                    } else {
+
+
+                    }
                 } catch (IOException e1) {
                     e1.printStackTrace();
                 }
@@ -70,35 +84,144 @@ public class MainFrame extends JFrame {
             }
 
             public void mouseEntered(MouseEvent e) {
-
+                loadedContentPanel.getButton_DStart().setCursor(new Cursor(Cursor.HAND_CURSOR));
             }
 
             public void mouseExited(MouseEvent e) {
+                loadedContentPanel.getButton_DStart().setCursor(new Cursor(Cursor.DEFAULT_CURSOR));
+            }
+        });
+        loadedContentPanel.getButton_DDelete().addMouseListener(new MouseListener() {
+            public void mouseClicked(MouseEvent e) {
+                dramaInfo.remove(loadedContentPanel.getSingleDramaInfoRegister());
+                container.remove(loadedContentPanel);
+                reloadListPanel();
+                repaintAllComponent();
+            }
 
+            public void mousePressed(MouseEvent e) {
+
+            }
+
+            public void mouseReleased(MouseEvent e) {
+
+            }
+
+            public void mouseEntered(MouseEvent e) {
+                loadedContentPanel.getButton_DDelete().setCursor(new Cursor(Cursor.HAND_CURSOR));
+            }
+
+            public void mouseExited(MouseEvent e) {
+                loadedContentPanel.getButton_DDelete().setCursor(new Cursor(Cursor.DEFAULT_CURSOR));
+            }
+        });
+        loadedContentPanel.getButton_AllProgressAdd().addMouseListener(new MouseListener() {
+            public void mouseClicked(MouseEvent e) {
+                loadedContentPanel.addAllProgress();
+            }
+
+            public void mousePressed(MouseEvent e) {
+
+            }
+
+            public void mouseReleased(MouseEvent e) {
+
+            }
+
+            public void mouseEntered(MouseEvent e) {
+                loadedContentPanel.getButton_AllProgressAdd().setCursor(new Cursor(Cursor.HAND_CURSOR));
+            }
+
+            public void mouseExited(MouseEvent e) {
+                loadedContentPanel.getButton_AllProgressAdd().setCursor(new Cursor(Cursor.DEFAULT_CURSOR));
+            }
+        });
+        loadedContentPanel.getButton_AllProgressMinus().addMouseListener(new MouseListener() {
+            public void mouseClicked(MouseEvent e) {
+                loadedContentPanel.minusAllProgress();
+            }
+
+            public void mousePressed(MouseEvent e) {
+
+            }
+
+            public void mouseReleased(MouseEvent e) {
+
+            }
+
+            public void mouseEntered(MouseEvent e) {
+                loadedContentPanel.getButton_AllProgressMinus().setCursor(new Cursor(Cursor.HAND_CURSOR));
+            }
+
+            public void mouseExited(MouseEvent e) {
+                loadedContentPanel.getButton_AllProgressMinus().setCursor(new Cursor(Cursor.DEFAULT_CURSOR));
+            }
+        });
+        loadedContentPanel.getButton_NowProgressAdd().addMouseListener(new MouseListener() {
+            public void mouseClicked(MouseEvent e) {
+                loadedContentPanel.addNowProgress();
+            }
+
+            public void mousePressed(MouseEvent e) {
+
+            }
+
+            public void mouseReleased(MouseEvent e) {
+
+            }
+
+            public void mouseEntered(MouseEvent e) {
+                loadedContentPanel.getButton_NowProgressAdd().setCursor(new Cursor(Cursor.HAND_CURSOR));
+            }
+
+            public void mouseExited(MouseEvent e) {
+                loadedContentPanel.getButton_NowProgressAdd().setCursor(new Cursor(Cursor.DEFAULT_CURSOR));
+            }
+        });
+        loadedContentPanel.getButton_NowProgressMinus().addMouseListener(new MouseListener() {
+            public void mouseClicked(MouseEvent e) {
+                loadedContentPanel.minusNowProgress();
+            }
+
+            public void mousePressed(MouseEvent e) {
+
+            }
+
+            public void mouseReleased(MouseEvent e) {
+
+            }
+
+            public void mouseEntered(MouseEvent e) {
+                loadedContentPanel.getButton_NowProgressMinus().setCursor(new Cursor(Cursor.HAND_CURSOR));
+            }
+
+            public void mouseExited(MouseEvent e) {
+                loadedContentPanel.getButton_NowProgressMinus().setCursor(new Cursor(Cursor.DEFAULT_CURSOR));
             }
         });
     }
 
-    public void buildVacantContentPanel(){
+    public void buildVacantContentPanel() {
         vacantContentPanel = new VacantContentPanel();
-        vacantContentPanel.setBounds(211,0,610,386);
+        vacantContentPanel.setBackground(Color.red);
+        vacantContentPanel.setBounds(211, 0, 610, 386);
         vacantContentPanel.setVisible(true);
         container.add(vacantContentPanel);
         vacantContentPanel.repaint();
         vacantContentPanel.getButton_Confirm().addMouseListener(new MouseListener() {
             public void mouseClicked(MouseEvent e) {
                 dramaInfo.add(
-                        vacantContentPanel.getTxtF_DName().getText()+"#"
-                        +vacantContentPanel.getTxtF_DProgressAll().getText()+"#"
-                        +vacantContentPanel.getTxtF_DProgressNow().getText()+"#"
-                        +vacantContentPanel.getPicPanel().getPicFile().getPath()+"#"
-                        +vacantContentPanel.getTxt_DURL().getText()
+                        vacantContentPanel.getTxtF_DName().getText() + "#"
+                                + vacantContentPanel.getTxtF_DProgressAll().getText() + "#"
+                                + vacantContentPanel.getTxtF_DProgressNow().getText() + "#"
+                                + vacantContentPanel.getPicPanel().getPicFile().getPath() + "#"
+                                + vacantContentPanel.getTxt_DURL().getText()
                 );
                 container.remove(vacantContentPanel);
-                container.remove(listPanel);
-                container.repaint();
-                buildListPanel(dramaInfo);
+                vacantContentPanel = null;
+                reloadListPanel();
             }
+
             public void mousePressed(MouseEvent e) {
 
             }
@@ -108,17 +231,18 @@ public class MainFrame extends JFrame {
             }
 
             public void mouseEntered(MouseEvent e) {
-
+                vacantContentPanel.getButton_Confirm().setCursor(new Cursor(Cursor.HAND_CURSOR));
             }
 
             public void mouseExited(MouseEvent e) {
-
+                vacantContentPanel.getButton_Confirm().setCursor(new Cursor(Cursor.DEFAULT_CURSOR));
             }
         });
         vacantContentPanel.getButton_Cancel().addMouseListener(new MouseListener() {
             public void mouseClicked(MouseEvent e) {
                 container.remove(vacantContentPanel);
-                container.repaint();
+                vacantContentPanel = null;
+                repaintAllComponent();
             }
 
             public void mousePressed(MouseEvent e) {
@@ -130,24 +254,36 @@ public class MainFrame extends JFrame {
             }
 
             public void mouseEntered(MouseEvent e) {
-
+                vacantContentPanel.getButton_Cancel().setCursor(new Cursor(Cursor.HAND_CURSOR));
             }
 
             public void mouseExited(MouseEvent e) {
-
+                vacantContentPanel.getButton_Cancel().setCursor(new Cursor(Cursor.DEFAULT_CURSOR));
             }
         });
     }
 
-    public void buildListPanel(List<String> dramaInfo){
+    public void buildListPanel(List<String> dramaInfo) {
         listPanel = new ListPanel(dramaInfo);
-        listPanel.setBounds(0,0,210,386);
+        listPanel.setBackground(Color.green);
+        listPanel.setBounds(0, 0, 210, 386);
         listPanel.setVisible(true);
         container.add(listPanel);
         listPanel.repaint();
         listPanel.getLabel_AddD().addMouseListener(new MouseListener() {
             public void mouseClicked(MouseEvent e) {
-                buildVacantContentPanel();
+                if (loadedContentPanel == null) {
+                    if (vacantContentPanel == null) {
+                        buildVacantContentPanel();
+                    }
+                } else {
+                    container.remove(loadedContentPanel);
+                    loadedContentPanel = null;
+                    if (vacantContentPanel == null) {
+                        buildVacantContentPanel();
+                    }
+                }
+                repaintAllComponent();
             }
 
             public void mousePressed(MouseEvent e) {
@@ -166,11 +302,18 @@ public class MainFrame extends JFrame {
                 listPanel.label_AddD.setCursor(new Cursor(Cursor.DEFAULT_CURSOR));
             }
         });
-        for (int i = 0 ; i<dramaInfo.size();i++){
+        for (int i = 0; i < dramaInfo.size(); i++) {
             listPanel.getjLabel()[i].addMouseListener(new MouseListener() {
                 public void mouseClicked(MouseEvent e) {
                     JLabel_withInfo jLabel_withInfo = (JLabel_withInfo) e.getSource();
-                    buildLoadedContentPanel(jLabel_withInfo.getSingleDramaInfo());
+                    if (vacantContentPanel == null) {
+                        if (loadedContentPanel == null) {
+                            buildLoadedContentPanel(jLabel_withInfo.getSingleDramaInfo());
+                        } else {
+                            loadedContentPanel.loadDramaInfoIntoPanel(jLabel_withInfo.getSingleDramaInfo());
+                        }
+                        repaintAllComponent();
+                    }
                 }
 
                 public void mousePressed(MouseEvent e) {
@@ -182,14 +325,69 @@ public class MainFrame extends JFrame {
                 }
 
                 public void mouseEntered(MouseEvent e) {
-
+                    ((JLabel_withInfo) e.getSource()).setCursor(new Cursor(Cursor.HAND_CURSOR));
                 }
 
                 public void mouseExited(MouseEvent e) {
-
+                    ((JLabel_withInfo) e.getSource()).setCursor(new Cursor(Cursor.DEFAULT_CURSOR));
                 }
             });
         }
     }
 
+    private void StoreDramaInfo() {
+        this.addWindowListener(new WindowListener() {
+            public void windowOpened(WindowEvent e) {
+
+            }
+
+            public void windowClosing(WindowEvent e) {
+
+            }
+
+            public void windowClosed(WindowEvent e) {
+                try {
+                    storeDramaInfo = StoreDramaInfo.getInstance(dramaInfo);
+                    storeDramaInfo.storeDramaInfo();
+                } catch (IOException e1) {
+                    e1.printStackTrace();
+                }
+            }
+
+            public void windowIconified(WindowEvent e) {
+
+            }
+
+            public void windowDeiconified(WindowEvent e) {
+
+            }
+
+            public void windowActivated(WindowEvent e) {
+
+            }
+
+            public void windowDeactivated(WindowEvent e) {
+
+            }
+        });
+    }
+
+    private void reloadListPanel() {
+        container.remove(listPanel);
+        repaintAllComponent();
+        buildListPanel(dramaInfo);
+    }
+
+    private void repaintAllComponent() {
+        container.repaint();
+        if (listPanel != null) {
+            listPanel.repaint();
+        }
+        if (loadedContentPanel != null) {
+            loadedContentPanel.repaint();
+        }
+        if (vacantContentPanel != null) {
+            vacantContentPanel.repaint();
+        }
+    }
 }

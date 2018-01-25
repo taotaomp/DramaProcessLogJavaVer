@@ -35,7 +35,7 @@ public class ListPanel extends JScrollPane implements ConstValues{
     ListPanel(List<String> dramaInfo){
         this.dramaInfo = dramaInfo;
 
-        this.setLayout(new ScrollPaneLayout());
+        this.setLayout(null);
         loadItems();
     }
 
