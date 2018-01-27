@@ -1,6 +1,7 @@
 package InfoStore;
 
 import Const.ConstValues;
+import Util.ChangeThePath;
 
 import java.io.*;
 import java.util.ArrayList;
@@ -43,7 +44,9 @@ public class StoreDramaInfo implements ConstValues {
 
         Iterator<String> iterator = dramaInfo.iterator();
         while (iterator.hasNext()){
-            bufferedWriter.write(iterator.next());
+            String rawValue = iterator.next();
+            String realValue = ChangeThePath.ConvertLinuxPath2WinPath(rawValue);
+            bufferedWriter.write(realValue);
             bufferedWriter.newLine();
         }
         bufferedWriter.close();

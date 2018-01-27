@@ -1,5 +1,6 @@
 package UIFrame;
 
+import Activity.MainActivity;
 import Const.ConstValues;
 import InfoLoad.LoadDramaInfo;
 import InfoStore.StoreDramaInfo;
@@ -36,10 +37,11 @@ public class MainFrame extends JFrame implements ConstValues {
             dramaInfo = loadDramaInfo.getDramaInfo();
             storeDramaInfo = StoreDramaInfo.getInstance(dramaInfo);
         } catch (IOException e) {
-            e.printStackTrace();
+            JOptionPane.showMessageDialog(this.getComponent(0),e.getMessage(),"error喵！",JOptionPane.ERROR_MESSAGE);
         }
         frameConfig();
         buildListPanel(dramaInfo);
+        addStoreDramaInfo();
     }
 
     /**
@@ -53,6 +55,10 @@ public class MainFrame extends JFrame implements ConstValues {
         this.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
     }
 
+    /**
+     * 创建带内容的内容窗口
+     * @param singleDInfo 单个番剧内容以"#"分割，共五项
+     */
     public void buildLoadedContentPanel(String singleDInfo) {
         loadedContentPanel = new LoadedContentPanel();
         loadedContentPanel.setBackground(Color.cyan);
@@ -93,6 +99,7 @@ public class MainFrame extends JFrame implements ConstValues {
         });
         loadedContentPanel.getButton_DDelete().addMouseListener(new MouseListener() {
             public void mouseClicked(MouseEvent e) {
+                MainActivity.loggerRun.getLogger().info("删除了番剧："+loadedContentPanel.txtF_DName.getText());
                 dramaInfo.remove(loadedContentPanel.getSingleDramaInfoRegister());
                 container.remove(loadedContentPanel);
                 reloadListPanel();
@@ -118,6 +125,11 @@ public class MainFrame extends JFrame implements ConstValues {
         loadedContentPanel.getButton_AllProgressAdd().addMouseListener(new MouseListener() {
             public void mouseClicked(MouseEvent e) {
                 loadedContentPanel.addAllProgress();
+
+                dramaInfo.remove(loadedContentPanel.getSingleDramaInfoRegister());
+                loadedContentPanel.updateSingleDramaInfoRegisterAfterChange();
+                dramaInfo.add(loadedContentPanel.getSingleDramaInfoRegister());
+                reloadListPanel();
             }
 
             public void mousePressed(MouseEvent e) {
@@ -139,6 +151,11 @@ public class MainFrame extends JFrame implements ConstValues {
         loadedContentPanel.getButton_AllProgressMinus().addMouseListener(new MouseListener() {
             public void mouseClicked(MouseEvent e) {
                 loadedContentPanel.minusAllProgress();
+
+                dramaInfo.remove(loadedContentPanel.getSingleDramaInfoRegister());
+                loadedContentPanel.updateSingleDramaInfoRegisterAfterChange();
+                dramaInfo.add(loadedContentPanel.getSingleDramaInfoRegister());
+                reloadListPanel();
             }
 
             public void mousePressed(MouseEvent e) {
@@ -160,6 +177,11 @@ public class MainFrame extends JFrame implements ConstValues {
         loadedContentPanel.getButton_NowProgressAdd().addMouseListener(new MouseListener() {
             public void mouseClicked(MouseEvent e) {
                 loadedContentPanel.addNowProgress();
+
+                dramaInfo.remove(loadedContentPanel.getSingleDramaInfoRegister());
+                loadedContentPanel.updateSingleDramaInfoRegisterAfterChange();
+                dramaInfo.add(loadedContentPanel.getSingleDramaInfoRegister());
+                reloadListPanel();
             }
 
             public void mousePressed(MouseEvent e) {
@@ -181,6 +203,11 @@ public class MainFrame extends JFrame implements ConstValues {
         loadedContentPanel.getButton_NowProgressMinus().addMouseListener(new MouseListener() {
             public void mouseClicked(MouseEvent e) {
                 loadedContentPanel.minusNowProgress();
+
+                dramaInfo.remove(loadedContentPanel.getSingleDramaInfoRegister());
+                loadedContentPanel.updateSingleDramaInfoRegisterAfterChange();
+                dramaInfo.add(loadedContentPanel.getSingleDramaInfoRegister());
+                reloadListPanel();
             }
 
             public void mousePressed(MouseEvent e) {
@@ -201,6 +228,9 @@ public class MainFrame extends JFrame implements ConstValues {
         });
     }
 
+    /**
+     * 构建空内容窗口
+     */
     public void buildVacantContentPanel() {
         vacantContentPanel = new VacantContentPanel();
         vacantContentPanel.setBackground(Color.red);
@@ -220,6 +250,7 @@ public class MainFrame extends JFrame implements ConstValues {
                 container.remove(vacantContentPanel);
                 vacantContentPanel = null;
                 reloadListPanel();
+                MainActivity.loggerRun.getLogger().info("添加了番剧："+vacantContentPanel.txtF_DName.getText());
             }
 
             public void mousePressed(MouseEvent e) {
@@ -263,6 +294,10 @@ public class MainFrame extends JFrame implements ConstValues {
         });
     }
 
+    /**
+     * 构建侧边条目窗口
+     * @param dramaInfo List<String>番剧信息集合
+     */
     public void buildListPanel(List<String> dramaInfo) {
         listPanel = new ListPanel(dramaInfo);
         listPanel.setBackground(Color.green);
@@ -335,23 +370,26 @@ public class MainFrame extends JFrame implements ConstValues {
         }
     }
 
-    private void StoreDramaInfo() {
+    /**
+     * 添加将番剧信息存储到本地的方法
+     */
+    private void addStoreDramaInfo() {
         this.addWindowListener(new WindowListener() {
             public void windowOpened(WindowEvent e) {
 
             }
 
             public void windowClosing(WindowEvent e) {
-
-            }
-
-            public void windowClosed(WindowEvent e) {
                 try {
                     storeDramaInfo = StoreDramaInfo.getInstance(dramaInfo);
                     storeDramaInfo.storeDramaInfo();
                 } catch (IOException e1) {
                     e1.printStackTrace();
                 }
+            }
+
+            public void windowClosed(WindowEvent e) {
+
             }
 
             public void windowIconified(WindowEvent e) {
@@ -372,12 +410,18 @@ public class MainFrame extends JFrame implements ConstValues {
         });
     }
 
+    /**
+     * dramaInfo有更新时，重新装载ListPanel的方法
+     */
     private void reloadListPanel() {
         container.remove(listPanel);
         repaintAllComponent();
         buildListPanel(dramaInfo);
     }
 
+    /**
+     * 重新绘制全部控件的方法
+     */
     private void repaintAllComponent() {
         container.repaint();
         if (listPanel != null) {

@@ -3,8 +3,6 @@ package UIFrame;
 import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.MouseEvent;
-import java.awt.event.MouseListener;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
@@ -51,6 +49,9 @@ public class VacantContentPanel extends ContentPanel {
         this.txt_DURL = txt_DURL;
     }
 
+    /**
+     * 构造方法
+     */
     public VacantContentPanel(){
         super(false);
         this.setTxtEditable(true);
@@ -60,6 +61,9 @@ public class VacantContentPanel extends ContentPanel {
         addComponents();
     }
 
+    /**
+     * 设置所有控件的位置和大小
+     */
     private void setComponentsBounds(){
         this.label_DURL.setBounds(34,170,93,18);
         this.txt_DURL.setBounds(150,170,200,18);
@@ -67,6 +71,9 @@ public class VacantContentPanel extends ContentPanel {
         this.button_Cancel.setBounds(469,295,70,20);
     }
 
+    /**
+     * 在容器中添加所有控件
+     */
     private void addComponents(){
         this.add(label_DURL);
         this.add(txt_DURL);
