@@ -80,14 +80,4 @@ public class VacantContentPanel extends ContentPanel {
         this.add(button_Confirm);
         this.add(button_Cancel);
     }
-
-    @Override
-    public void print(Graphics g) {
-        try {
-            BufferedImage bufferedImage = ImageIO.read(new File(CONTENT_BACKGROUND_PIC_PATH));
-            g.drawImage(bufferedImage,0,0,this.getWidth(),this.getHeight(), null);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
 }

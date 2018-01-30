@@ -2,12 +2,9 @@ package UIFrame;
 
 import Activity.MainActivity;
 
-import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
-import java.awt.image.BufferedImage;
 import java.io.File;
-import java.io.IOException;
 
 /**
  * 有内容时，单个番剧的面板
@@ -168,6 +165,9 @@ public class LoadedContentPanel extends ContentPanel {
         }
     }
 
+    /**
+     * 在番剧进度按钮点击后，将番剧信息更新到番剧全部信息寄存字段中
+     */
     public void updateSingleDramaInfoRegisterAfterChange() {
         singleDramaInfoRegister = this.txtF_DName.getText() + "#"
                 + this.txtF_DProgressAll.getText() + "#"
@@ -205,12 +205,9 @@ public class LoadedContentPanel extends ContentPanel {
     }
 
     @Override
-    public void print(Graphics g) {
-        try {
-            BufferedImage bufferedImage = ImageIO.read(new File(CONTENT_BACKGROUND_PIC_PATH));
-            g.drawImage(bufferedImage, 0, 0, null);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+    protected void printComponent(Graphics g) {
+        super.printComponent(g);
+        ImageIcon imageIcon = new ImageIcon(CONTENT_BACKGROUND_PIC_PATH);
+        g.drawImage(imageIcon.getImage(),0,0,this);
     }
 }

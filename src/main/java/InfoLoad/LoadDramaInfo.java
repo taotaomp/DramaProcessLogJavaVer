@@ -2,6 +2,7 @@ package InfoLoad;
 
 import Const.ConstValues;
 import Util.ChangeThePath;
+import Util.CheckOperationSystem;
 
 import java.io.*;
 import java.util.ArrayList;
@@ -44,8 +45,12 @@ public class LoadDramaInfo implements ConstValues {
         BufferedReader bufferedReader = new BufferedReader(fileReader); //我来给你加个buff（逃
         while(bufferedReader.ready()){
             String rawValue = bufferedReader.readLine();
-            String realValue = ChangeThePath.ConvertWinPath2LinuxPath(rawValue);
-            dramaInfo.add(realValue);
+            if(CheckOperationSystem.getSystem().toLowerCase().contains("win")){
+                dramaInfo.add(rawValue);
+            }else {
+                String realValue = ChangeThePath.ConvertWinPath2LinuxPath(rawValue);
+                dramaInfo.add(realValue);
+            }
         }
         bufferedReader.close();
         fileReader.close();

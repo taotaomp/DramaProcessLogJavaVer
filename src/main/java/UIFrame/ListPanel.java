@@ -2,29 +2,24 @@ package UIFrame;
 
 import Const.ConstValues;
 
-import javax.imageio.IIOImage;
 import javax.imageio.ImageIO;
 import javax.swing.*;
-import javax.swing.event.ListSelectionEvent;
-import javax.swing.event.ListSelectionListener;
 import java.awt.*;
-import java.awt.event.MouseEvent;
-import java.awt.event.MouseListener;
+
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
 public class ListPanel extends JScrollPane implements ConstValues{
-    List<String> dramaInfo;
+    private List<String> dramaInfo;
 
     public JLabel_withInfo[] getjLabel() {
         return jLabel_withInfo;
     }
 
-    JLabel_withInfo[] jLabel_withInfo ;
+    private JLabel_withInfo[] jLabel_withInfo ;
 
     public JLabel getLabel_AddD() {
         return label_AddD;

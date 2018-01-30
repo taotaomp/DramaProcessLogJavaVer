@@ -2,6 +2,7 @@ package InfoStore;
 
 import Const.ConstValues;
 import Util.ChangeThePath;
+import Util.CheckOperationSystem;
 
 import java.io.*;
 import java.util.ArrayList;
@@ -45,9 +46,14 @@ public class StoreDramaInfo implements ConstValues {
         Iterator<String> iterator = dramaInfo.iterator();
         while (iterator.hasNext()){
             String rawValue = iterator.next();
-            String realValue = ChangeThePath.ConvertLinuxPath2WinPath(rawValue);
-            bufferedWriter.write(realValue);
-            bufferedWriter.newLine();
+            if(CheckOperationSystem.getSystem().toLowerCase().contains("win")){     //检测系统是否为windows系统
+                bufferedWriter.write(rawValue);
+                bufferedWriter.newLine();
+            }else {
+                String realValue = ChangeThePath.ConvertLinuxPath2WinPath(rawValue);    //不是windows系统的话需要将路径转换
+                bufferedWriter.write(realValue);
+                bufferedWriter.newLine();
+            }
         }
         bufferedWriter.close();
         fileWriter.close();

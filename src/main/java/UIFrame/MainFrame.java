@@ -4,6 +4,7 @@ import Activity.MainActivity;
 import Const.ConstValues;
 import InfoLoad.LoadDramaInfo;
 import InfoStore.StoreDramaInfo;
+import Util.CheckOperationSystem;
 
 import javax.swing.*;
 import java.awt.*;
@@ -61,7 +62,7 @@ public class MainFrame extends JFrame implements ConstValues {
      */
     public void buildLoadedContentPanel(String singleDInfo) {
         loadedContentPanel = new LoadedContentPanel();
-        loadedContentPanel.setBackground(Color.cyan);
+        //loadedContentPanel.setBackground(Color.cyan);
         loadedContentPanel.setBounds(211, 0, 610, 386);
         loadedContentPanel.setVisible(true);
         loadedContentPanel.loadDramaInfoIntoPanel(singleDInfo);
@@ -73,8 +74,9 @@ public class MainFrame extends JFrame implements ConstValues {
                     if (loadedContentPanel.getDUrl().contains("http")) {
                         Runtime.getRuntime().exec(BROWSER_NAME + " " + loadedContentPanel.getDUrl());
                     } else {
-
-
+                        if(CheckOperationSystem.getSystem().toLowerCase().contains("win")){
+                            Runtime.getRuntime().exec("explorer.exe"+" "+loadedContentPanel.getDUrl());
+                        }
                     }
                 } catch (IOException e1) {
                     e1.printStackTrace();

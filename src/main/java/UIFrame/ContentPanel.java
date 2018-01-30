@@ -24,6 +24,8 @@ public abstract class ContentPanel extends JPanel implements ConstValues{
     protected JTextArea txtF_DProgressAll = new JTextArea();
     protected JTextArea txtF_DProgressNow = new JTextArea();
 
+    protected Image image = (Image)new ImageIcon(CONTENT_BACKGROUND_PIC_PATH).getImage();
+
     protected PicPanel panel_DPicture;
 
     /**
@@ -37,18 +39,24 @@ public abstract class ContentPanel extends JPanel implements ConstValues{
         this.setLayout(null);
     }
 
-    /**
-     * 覆盖print方法，以绘制背景图片
-     * @param g
-     */
+//    /**
+//     * 覆盖print方法，以绘制背景图片
+//     * @param g
+//     */
+//    @Override
+//    public void print(Graphics g) {
+//        try {
+//            BufferedImage bufferedImage = ImageIO.read(new File(CONTENT_BACKGROUND_PIC_PATH));
+//            g.drawImage(bufferedImage,0,0, null);
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
+//    }
+
+
     @Override
-    public void print(Graphics g) {
-        try {
-            BufferedImage bufferedImage = ImageIO.read(new File(CONTENT_BACKGROUND_PIC_PATH));
-            g.drawImage(bufferedImage,0,0, null);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+    protected void printComponent(Graphics g) {
+        g.drawImage(image,0,0,this.getWidth(),this.getHeight(),this);
     }
 
     /**
