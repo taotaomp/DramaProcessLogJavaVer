@@ -7,23 +7,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e84d2cf4-ad72-4ba5-80a7-91a59f9937fe" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/artifacts/DramaProcessLogJavaVer_jar.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/Util/CheckOperationSystem.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/classes/Util/CheckOperationSystem.class" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/InfoLoad/LoadDramaInfo.java" afterPath="$PROJECT_DIR$/src/main/java/InfoLoad/LoadDramaInfo.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/InfoStore/StoreDramaInfo.java" afterPath="$PROJECT_DIR$/src/main/java/InfoStore/StoreDramaInfo.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/UIFrame/ContentPanel.java" afterPath="$PROJECT_DIR$/src/main/java/UIFrame/ContentPanel.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/UIFrame/ListPanel.java" afterPath="$PROJECT_DIR$/src/main/java/UIFrame/ListPanel.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/UIFrame/LoadedContentPanel.java" afterPath="$PROJECT_DIR$/src/main/java/UIFrame/LoadedContentPanel.java" />
+      <change beforePath="$PROJECT_DIR$/Data/dramaInfo" afterPath="$PROJECT_DIR$/Data/dramaInfo" />
+      <change beforePath="$PROJECT_DIR$/file.log" afterPath="$PROJECT_DIR$/file.log" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/DramaProcessLogJavaVer_jar/DramaProcessLogJavaVer.jar" afterPath="$PROJECT_DIR$/out/artifacts/DramaProcessLogJavaVer_jar/DramaProcessLogJavaVer.jar" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/DramaProcessLogJavaVer_jar/file.log" afterPath="$PROJECT_DIR$/out/artifacts/DramaProcessLogJavaVer_jar/file.log" />
       <change beforePath="$PROJECT_DIR$/src/main/java/UIFrame/MainFrame.java" afterPath="$PROJECT_DIR$/src/main/java/UIFrame/MainFrame.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/UIFrame/VacantContentPanel.java" afterPath="$PROJECT_DIR$/src/main/java/UIFrame/VacantContentPanel.java" />
-      <change beforePath="$PROJECT_DIR$/target/classes/InfoLoad/LoadDramaInfo.class" afterPath="$PROJECT_DIR$/target/classes/InfoLoad/LoadDramaInfo.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/InfoStore/StoreDramaInfo.class" afterPath="$PROJECT_DIR$/target/classes/InfoStore/StoreDramaInfo.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/UIFrame/ContentPanel.class" afterPath="$PROJECT_DIR$/target/classes/UIFrame/ContentPanel.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/UIFrame/JLabel_withInfo.class" afterPath="$PROJECT_DIR$/target/classes/UIFrame/JLabel_withInfo.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/UIFrame/ListPanel.class" afterPath="$PROJECT_DIR$/target/classes/UIFrame/ListPanel.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/UIFrame/LoadedContentPanel.class" afterPath="$PROJECT_DIR$/target/classes/UIFrame/LoadedContentPanel.class" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/UIFrame/PicPanel.java" afterPath="$PROJECT_DIR$/src/main/java/UIFrame/PicPanel.java" />
       <change beforePath="$PROJECT_DIR$/target/classes/UIFrame/MainFrame$1.class" afterPath="$PROJECT_DIR$/target/classes/UIFrame/MainFrame$1.class" />
       <change beforePath="$PROJECT_DIR$/target/classes/UIFrame/MainFrame$10.class" afterPath="$PROJECT_DIR$/target/classes/UIFrame/MainFrame$10.class" />
       <change beforePath="$PROJECT_DIR$/target/classes/UIFrame/MainFrame$11.class" afterPath="$PROJECT_DIR$/target/classes/UIFrame/MainFrame$11.class" />
@@ -36,7 +26,7 @@
       <change beforePath="$PROJECT_DIR$/target/classes/UIFrame/MainFrame$8.class" afterPath="$PROJECT_DIR$/target/classes/UIFrame/MainFrame$8.class" />
       <change beforePath="$PROJECT_DIR$/target/classes/UIFrame/MainFrame$9.class" afterPath="$PROJECT_DIR$/target/classes/UIFrame/MainFrame$9.class" />
       <change beforePath="$PROJECT_DIR$/target/classes/UIFrame/MainFrame.class" afterPath="$PROJECT_DIR$/target/classes/UIFrame/MainFrame.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/UIFrame/VacantContentPanel.class" afterPath="$PROJECT_DIR$/target/classes/UIFrame/VacantContentPanel.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/UIFrame/PicPanel$1.class" afterPath="$PROJECT_DIR$/target/classes/UIFrame/PicPanel$1.class" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -54,41 +44,93 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="MainFrame.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="MainFrame.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/UIFrame/MainFrame.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="18">
-              <caret line="78" column="25" lean-forward="false" selection-start-line="78" selection-start-column="25" selection-end-line="78" selection-end-column="25" />
+            <state relative-caret-position="514">
+              <caret line="252" column="0" lean-forward="true" selection-start-line="252" selection-start-column="0" selection-end-line="252" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="method#mousePressed#0;class#2275:3413" expanded="false" />
-                <element signature="method#mouseReleased#0;class#2275:3413" expanded="false" />
-                <element signature="class#3484:4369" expanded="false" />
-                <element signature="class#4447:5359" expanded="false" />
-                <element signature="class#5439:6357" expanded="false" />
-                <element signature="class#6435:7347" expanded="false" />
-                <element signature="class#7427:8345" expanded="false" />
-                <element signature="class#8788:10076" expanded="false" />
-                <element signature="class#10146:10847" expanded="false" />
-                <element signature="class#11280:12302" expanded="false" />
-                <element signature="e#12047#12048#0" expanded="true" />
-                <element signature="e#12141#12142#0" expanded="true" />
-                <element signature="e#12194#12195#0" expanded="true" />
-                <element signature="e#12291#12292#0" expanded="true" />
-                <element signature="class#12416:13552" expanded="false" />
-                <element signature="method#windowOpened#0;class#13685:14472" expanded="false" />
-                <element signature="method#windowClosed#0;class#13685:14472" expanded="false" />
-                <element signature="method#windowIconified#0;class#13685:14472" expanded="false" />
-                <element signature="method#windowDeiconified#0;class#13685:14472" expanded="false" />
-                <element signature="method#windowActivated#0;class#13685:14472" expanded="false" />
-                <element signature="method#windowDeactivated#0;class#13685:14472" expanded="false" />
+                <element signature="method#mousePressed#0;class#2285:3429" expanded="false" />
+                <element signature="method#mouseReleased#0;class#2285:3429" expanded="false" />
+                <element signature="class#3500:4269" expanded="false" />
+                <element signature="class#4347:5259" expanded="false" />
+                <element signature="class#5339:6257" expanded="false" />
+                <element signature="class#6335:7247" expanded="false" />
+                <element signature="class#7327:8245" expanded="false" />
+                <element signature="class#10087:10788" expanded="false" />
+                <element signature="class#11228:12250" expanded="false" />
+                <element signature="e#11995#11996#0" expanded="true" />
+                <element signature="e#12089#12090#0" expanded="true" />
+                <element signature="e#12142#12143#0" expanded="true" />
+                <element signature="e#12239#12240#0" expanded="true" />
+                <element signature="class#12364:13500" expanded="false" />
+                <element signature="method#windowOpened#0;class#13633:14420" expanded="false" />
+                <element signature="method#windowClosed#0;class#13633:14420" expanded="false" />
+                <element signature="method#windowIconified#0;class#13633:14420" expanded="false" />
+                <element signature="method#windowDeiconified#0;class#13633:14420" expanded="false" />
+                <element signature="method#windowActivated#0;class#13633:14420" expanded="false" />
+                <element signature="method#windowDeactivated#0;class#13633:14420" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DramaProgressLogJavaVer.sh" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/out/artifacts/DramaProcessLogJavaVer_jar/DramaProgressLogJavaVer.sh">
+      <file leaf-file-name="PicPanel.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/UIFrame/PicPanel.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="393">
+              <caret line="51" column="87" lean-forward="false" selection-start-line="51" selection-start-column="87" selection-end-line="51" selection-end-column="87" />
+              <folding>
+                <element signature="e#451#452#0" expanded="true" />
+                <element signature="e#481#482#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ContentPanel.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/UIFrame/ContentPanel.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="360">
+              <caret line="35" column="33" lean-forward="false" selection-start-line="35" selection-start-column="33" selection-end-line="35" selection-end-column="33" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="file.log" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/file.log">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="604">
+              <caret line="39" column="28" lean-forward="false" selection-start-line="39" selection-start-column="28" selection-end-line="39" selection-end-column="28" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="StoreDramaInfo.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/InfoStore/StoreDramaInfo.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="275">
+              <caret line="52" column="0" lean-forward="false" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ChangeThePath.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Util/ChangeThePath.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="72">
+              <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="dramaInfo" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Data/dramaInfo">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="36">
               <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
@@ -97,53 +139,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DramaProgressLogJavaVer.bat" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/out/artifacts/DramaProcessLogJavaVer_jar/DramaProgressLogJavaVer.bat">
+      <file leaf-file-name="LoadDramaInfo.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/InfoLoad/LoadDramaInfo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="18">
-              <caret line="1" column="37" lean-forward="false" selection-start-line="1" selection-start-column="37" selection-end-line="1" selection-end-column="37" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="file.log" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/out/artifacts/DramaProcessLogJavaVer_jar/file.log">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CheckOperationSystem.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Util/CheckOperationSystem.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Activity/MainActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
-              <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-              <folding>
-                <element signature="e#237#238#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="StoreDramaInfo.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/InfoStore/StoreDramaInfo.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="810">
-              <caret line="52" column="110" lean-forward="false" selection-start-line="52" selection-start-column="110" selection-end-line="52" selection-end-column="110" />
+            <state relative-caret-position="-91">
+              <caret line="15" column="13" lean-forward="false" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -152,38 +152,8 @@
       <file leaf-file-name="LoadedContentPanel.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/UIFrame/LoadedContentPanel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3024">
+            <state relative-caret-position="95">
               <caret line="168" column="37" lean-forward="false" selection-start-line="168" selection-start-column="37" selection-end-line="168" selection-end-column="37" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#229#230#0" expanded="true" />
-                <element signature="e#265#266#0" expanded="true" />
-                <element signature="e#306#307#0" expanded="true" />
-                <element signature="e#343#344#0" expanded="true" />
-                <element signature="e#391#392#0" expanded="true" />
-                <element signature="e#435#436#0" expanded="true" />
-                <element signature="e#485#486#0" expanded="true" />
-                <element signature="e#531#532#0" expanded="true" />
-                <element signature="e#579#580#0" expanded="true" />
-                <element signature="e#623#624#0" expanded="true" />
-                <element signature="e#673#674#0" expanded="true" />
-                <element signature="e#719#720#0" expanded="true" />
-                <element signature="e#750#751#0" expanded="true" />
-                <element signature="e#777#778#0" expanded="true" />
-                <element signature="e#827#828#0" expanded="true" />
-                <element signature="e#873#874#0" expanded="true" />
-                <element signature="e#929#930#0" expanded="true" />
-                <element signature="e#975#976#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LoadDramaInfo.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/InfoLoad/LoadDramaInfo.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="17" lean-forward="false" selection-start-line="0" selection-start-column="17" selection-end-line="0" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -192,9 +162,11 @@
       <file leaf-file-name="ListPanel.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/UIFrame/ListPanel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="10" column="27" lean-forward="false" selection-start-line="10" selection-start-column="27" selection-end-line="10" selection-end-column="27" />
-              <folding />
+            <state relative-caret-position="466">
+              <caret line="51" column="0" lean-forward="false" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -248,7 +220,6 @@
         <option value="$PROJECT_DIR$/src/main/java/Const/ConstValues.java" />
         <option value="$PROJECT_DIR$/Config/log4j.properties" />
         <option value="$PROJECT_DIR$/file.log" />
-        <option value="$PROJECT_DIR$/src/main/java/UIFrame/PicPanel.java" />
         <option value="$PROJECT_DIR$/src/test/java/ReadTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/Util/ChangeThePath.java" />
         <option value="$PROJECT_DIR$/src/main/java/UIFrame/ContentPanel.java" />
@@ -259,9 +230,10 @@
         <option value="$PROJECT_DIR$/src/main/java/InfoStore/StoreDramaInfo.java" />
         <option value="$PROJECT_DIR$/src/main/java/UIFrame/ListPanel.java" />
         <option value="$PROJECT_DIR$/src/main/java/UIFrame/LoadedContentPanel.java" />
-        <option value="$PROJECT_DIR$/src/main/java/UIFrame/MainFrame.java" />
         <option value="$PROJECT_DIR$/out/artifacts/DramaProcessLogJavaVer_jar/DramaProgressLogJavaVer.sh" />
         <option value="$PROJECT_DIR$/out/artifacts/DramaProcessLogJavaVer_jar/DramaProgressLogJavaVer.bat" />
+        <option value="$PROJECT_DIR$/src/main/java/UIFrame/PicPanel.java" />
+        <option value="$PROJECT_DIR$/src/main/java/UIFrame/MainFrame.java" />
       </list>
     </option>
   </component>
@@ -295,10 +267,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView" />
-      <pane id="Scratches" />
       <pane id="PackagesPane" />
-      <pane id="Scope" />
+      <pane id="Scratches" />
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -353,7 +324,39 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="Activity" type="462c0819:PsiDirectoryNode" />
+              <item name="Const" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DramaProcessLogJavaVer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DramaProcessLogJavaVer" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="InfoLoad" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DramaProcessLogJavaVer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DramaProcessLogJavaVer" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="InfoStore" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DramaProcessLogJavaVer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DramaProcessLogJavaVer" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="UIFrame" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DramaProcessLogJavaVer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DramaProcessLogJavaVer" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="Util" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="DramaProcessLogJavaVer" type="b2602c69:ProjectViewProjectNode" />
@@ -365,6 +368,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -387,7 +391,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JAR Application.DramaProcessLogJavaVer.jar">
+  <component name="RunManager" selected="Application.MainActivity">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="HTML_USED" value="false" />
       <option name="WIDTH" value="400" />
@@ -545,38 +549,38 @@
       <workItem from="1517047849510" duration="7641000" />
       <workItem from="1517189272425" duration="274000" />
       <workItem from="1517307076300" duration="3602000" />
-      <workItem from="1517313974600" duration="1904000" />
+      <workItem from="1517313974600" duration="2019000" />
+      <workItem from="1517375690722" duration="2682000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="70443000" />
+    <option name="totallyTimeSpent" value="73240000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="1853" height="1055" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3231579" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3227848" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.15368421" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.14947368" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18888289" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18888289" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.37236288" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3705263" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -594,19 +598,19 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="55" />
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/InfoStore/StoreDramaInfo.java</url>
+          <line>52</line>
+          <properties />
+          <option name="timeStamp" value="63" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="64" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/UIFrame/ListPanel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="8" column="35" lean-forward="false" selection-start-line="8" selection-start-column="35" selection-end-line="8" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/InfoStore/StoreDramaInfo.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="72">
@@ -780,13 +784,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/file.log">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Logger/LoggerRun.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="126">
@@ -806,87 +803,14 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/ReadTest.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/Const/ConstValues.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="6" column="27" lean-forward="false" selection-start-line="6" selection-start-column="27" selection-end-line="6" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///usr/java/jdk1.8.0_151/src.zip!/java/awt/AWTEventMulticaster.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="349" column="0" lean-forward="false" selection-start-line="349" selection-start-column="0" selection-end-line="349" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/UIFrame/PicPanel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="13" column="13" lean-forward="false" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#381#382#0" expanded="false" />
-            <element signature="e#419#420#0" expanded="false" />
-            <element signature="e#451#452#0" expanded="false" />
-            <element signature="e#481#482#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Util/ChangeThePath.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="5" column="50" lean-forward="false" selection-start-line="5" selection-start-column="50" selection-end-line="5" selection-end-column="50" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/UIFrame/ContentPanel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="249">
-          <caret line="26" column="20" lean-forward="false" selection-start-line="26" selection-start-column="20" selection-end-line="26" selection-end-column="20" />
-          <folding>
-            <element signature="e#1567#1568#0" expanded="false" />
-            <element signature="e#1643#1644#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/UIFrame/VacantContentPanel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="603">
-          <caret line="81" column="5" lean-forward="false" selection-start-line="81" selection-start-column="5" selection-end-line="81" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Config/DPL参数.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
           <caret line="11" column="3" lean-forward="false" selection-start-line="11" selection-start-column="3" selection-end-line="11" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Data/dramaInfo">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Util/Platform.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/UIFrame/ListPanel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="10" column="27" lean-forward="false" selection-start-line="10" selection-start-column="27" selection-end-line="10" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Util/CheckOperationSystem.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
@@ -900,98 +824,24 @@
         <state relative-caret-position="126">
           <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
           <folding>
-            <element signature="e#237#238#0" expanded="true" />
+            <element signature="e#237#238#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/InfoStore/StoreDramaInfo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="810">
-          <caret line="52" column="110" lean-forward="false" selection-start-line="52" selection-start-column="110" selection-end-line="52" selection-end-column="110" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/UIFrame/LoadedContentPanel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3024">
-          <caret line="168" column="37" lean-forward="false" selection-start-line="168" selection-start-column="37" selection-end-line="168" selection-end-column="37" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#229#230#0" expanded="true" />
-            <element signature="e#265#266#0" expanded="true" />
-            <element signature="e#306#307#0" expanded="true" />
-            <element signature="e#343#344#0" expanded="true" />
-            <element signature="e#391#392#0" expanded="true" />
-            <element signature="e#435#436#0" expanded="true" />
-            <element signature="e#485#486#0" expanded="true" />
-            <element signature="e#531#532#0" expanded="true" />
-            <element signature="e#579#580#0" expanded="true" />
-            <element signature="e#623#624#0" expanded="true" />
-            <element signature="e#673#674#0" expanded="true" />
-            <element signature="e#719#720#0" expanded="true" />
-            <element signature="e#750#751#0" expanded="true" />
-            <element signature="e#777#778#0" expanded="true" />
-            <element signature="e#827#828#0" expanded="true" />
-            <element signature="e#873#874#0" expanded="true" />
-            <element signature="e#929#930#0" expanded="true" />
-            <element signature="e#975#976#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/InfoLoad/LoadDramaInfo.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/META-INF/MANIFEST.MF" />
+    <entry file="file://$PROJECT_DIR$/out/artifacts/DramaProcessLogJavaVer_jar/file.log">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="17" lean-forward="false" selection-start-line="0" selection-start-column="17" selection-end-line="0" selection-end-column="17" />
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/UIFrame/MainFrame.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Const/ConstValues.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="78" column="25" lean-forward="false" selection-start-line="78" selection-start-column="25" selection-end-line="78" selection-end-column="25" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#mousePressed#0;class#2275:3413" expanded="false" />
-            <element signature="method#mouseReleased#0;class#2275:3413" expanded="false" />
-            <element signature="class#3484:4369" expanded="false" />
-            <element signature="class#4447:5359" expanded="false" />
-            <element signature="class#5439:6357" expanded="false" />
-            <element signature="class#6435:7347" expanded="false" />
-            <element signature="class#7427:8345" expanded="false" />
-            <element signature="class#8788:10076" expanded="false" />
-            <element signature="class#10146:10847" expanded="false" />
-            <element signature="class#11280:12302" expanded="false" />
-            <element signature="e#12047#12048#0" expanded="true" />
-            <element signature="e#12141#12142#0" expanded="true" />
-            <element signature="e#12194#12195#0" expanded="true" />
-            <element signature="e#12291#12292#0" expanded="true" />
-            <element signature="class#12416:13552" expanded="false" />
-            <element signature="method#windowOpened#0;class#13685:14472" expanded="false" />
-            <element signature="method#windowClosed#0;class#13685:14472" expanded="false" />
-            <element signature="method#windowIconified#0;class#13685:14472" expanded="false" />
-            <element signature="method#windowDeiconified#0;class#13685:14472" expanded="false" />
-            <element signature="method#windowActivated#0;class#13685:14472" expanded="false" />
-            <element signature="method#windowDeactivated#0;class#13685:14472" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/META-INF/MANIFEST.MF">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/out/artifacts/DramaProcessLogJavaVer_jar/DramaProgressLogJavaVer.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+        <state relative-caret-position="252">
+          <caret line="14" column="62" lean-forward="true" selection-start-line="14" selection-start-column="62" selection-end-line="14" selection-end-column="62" />
           <folding />
         </state>
       </provider>
@@ -1004,11 +854,148 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/out/artifacts/DramaProcessLogJavaVer_jar/file.log">
+    <entry file="file://$PROJECT_DIR$/out/artifacts/DramaProcessLogJavaVer_jar/DramaProgressLogJavaVer.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="36">
+          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/java/jdk1.8.0_151/src.zip!/java/awt/Font.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="566" column="0" lean-forward="false" selection-start-line="566" selection-start-column="0" selection-end-line="566" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/UIFrame/VacantContentPanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-86">
+          <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+          <folding>
+            <element signature="e#535#536#0" expanded="true" />
+            <element signature="e#739#740#0" expanded="true" />
+            <element signature="e#779#780#0" expanded="true" />
+            <element signature="e#815#816#0" expanded="true" />
+            <element signature="e#857#858#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/UIFrame/ContentPanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="35" column="33" lean-forward="false" selection-start-line="35" selection-start-column="33" selection-end-line="35" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/java/jdk1.8.0_151/src.zip!/java/awt/AWTEventMulticaster.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="258">
+          <caret line="269" column="0" lean-forward="false" selection-start-line="269" selection-start-column="0" selection-end-line="269" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/UIFrame/ListPanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="466">
+          <caret line="51" column="0" lean-forward="false" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/file.log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="604">
+          <caret line="39" column="28" lean-forward="false" selection-start-line="39" selection-start-column="28" selection-end-line="39" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/UIFrame/PicPanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="393">
+          <caret line="51" column="87" lean-forward="false" selection-start-line="51" selection-start-column="87" selection-end-line="51" selection-end-column="87" />
+          <folding>
+            <element signature="e#451#452#0" expanded="true" />
+            <element signature="e#481#482#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Data/dramaInfo">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/UIFrame/LoadedContentPanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="168" column="37" lean-forward="false" selection-start-line="168" selection-start-column="37" selection-end-line="168" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/InfoStore/StoreDramaInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="52" column="0" lean-forward="false" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Util/ChangeThePath.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/InfoLoad/LoadDramaInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-91">
+          <caret line="15" column="13" lean-forward="false" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/UIFrame/MainFrame.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="514">
+          <caret line="252" column="0" lean-forward="true" selection-start-line="252" selection-start-column="0" selection-end-line="252" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#mousePressed#0;class#2285:3429" expanded="false" />
+            <element signature="method#mouseReleased#0;class#2285:3429" expanded="false" />
+            <element signature="class#3500:4269" expanded="false" />
+            <element signature="class#4347:5259" expanded="false" />
+            <element signature="class#5339:6257" expanded="false" />
+            <element signature="class#6335:7247" expanded="false" />
+            <element signature="class#7327:8245" expanded="false" />
+            <element signature="class#10087:10788" expanded="false" />
+            <element signature="class#11228:12250" expanded="false" />
+            <element signature="e#11995#11996#0" expanded="true" />
+            <element signature="e#12089#12090#0" expanded="true" />
+            <element signature="e#12142#12143#0" expanded="true" />
+            <element signature="e#12239#12240#0" expanded="true" />
+            <element signature="class#12364:13500" expanded="false" />
+            <element signature="method#windowOpened#0;class#13633:14420" expanded="false" />
+            <element signature="method#windowClosed#0;class#13633:14420" expanded="false" />
+            <element signature="method#windowIconified#0;class#13633:14420" expanded="false" />
+            <element signature="method#windowDeiconified#0;class#13633:14420" expanded="false" />
+            <element signature="method#windowActivated#0;class#13633:14420" expanded="false" />
+            <element signature="method#windowDeactivated#0;class#13633:14420" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>

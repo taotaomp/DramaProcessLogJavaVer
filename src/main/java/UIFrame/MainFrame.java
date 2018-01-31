@@ -38,7 +38,7 @@ public class MainFrame extends JFrame implements ConstValues {
             dramaInfo = loadDramaInfo.getDramaInfo();
             storeDramaInfo = StoreDramaInfo.getInstance(dramaInfo);
         } catch (IOException e) {
-            JOptionPane.showMessageDialog(this.getComponent(0),e.getMessage(),"error喵！",JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(this.getComponent(0), e.getMessage(), "error喵！", JOptionPane.ERROR_MESSAGE);
         }
         frameConfig();
         buildListPanel(dramaInfo);
@@ -58,6 +58,7 @@ public class MainFrame extends JFrame implements ConstValues {
 
     /**
      * 创建带内容的内容窗口
+     *
      * @param singleDInfo 单个番剧内容以"#"分割，共五项
      */
     public void buildLoadedContentPanel(String singleDInfo) {
@@ -74,8 +75,8 @@ public class MainFrame extends JFrame implements ConstValues {
                     if (loadedContentPanel.getDUrl().contains("http")) {
                         Runtime.getRuntime().exec(BROWSER_NAME + " " + loadedContentPanel.getDUrl());
                     } else {
-                        if(CheckOperationSystem.getSystem().toLowerCase().contains("win")){
-                            Runtime.getRuntime().exec("explorer.exe"+" "+loadedContentPanel.getDUrl());
+                        if (CheckOperationSystem.getSystem().toLowerCase().contains("win")) {
+                            Runtime.getRuntime().exec("explorer.exe" + " " + loadedContentPanel.getDUrl());
                         }
                     }
                 } catch (IOException e1) {
@@ -101,11 +102,13 @@ public class MainFrame extends JFrame implements ConstValues {
         });
         loadedContentPanel.getButton_DDelete().addMouseListener(new MouseListener() {
             public void mouseClicked(MouseEvent e) {
-                MainActivity.loggerRun.getLogger().info("删除了番剧："+loadedContentPanel.txtF_DName.getText());
+                MainActivity.loggerRun.getLogger().info("删除了番剧：" + loadedContentPanel.txtF_DName.getText());
                 dramaInfo.remove(loadedContentPanel.getSingleDramaInfoRegister());
-                container.remove(loadedContentPanel);
                 reloadListPanel();
                 repaintAllComponent();
+                //这两个必须在最后，否则其他语句不起作用
+                container.remove(loadedContentPanel);
+                loadedContentPanel = null;
             }
 
             public void mousePressed(MouseEvent e) {
@@ -117,11 +120,9 @@ public class MainFrame extends JFrame implements ConstValues {
             }
 
             public void mouseEntered(MouseEvent e) {
-                loadedContentPanel.getButton_DDelete().setCursor(new Cursor(Cursor.HAND_CURSOR));
             }
 
             public void mouseExited(MouseEvent e) {
-                loadedContentPanel.getButton_DDelete().setCursor(new Cursor(Cursor.DEFAULT_CURSOR));
             }
         });
         loadedContentPanel.getButton_AllProgressAdd().addMouseListener(new MouseListener() {
@@ -249,10 +250,12 @@ public class MainFrame extends JFrame implements ConstValues {
                                 + vacantContentPanel.getPicPanel().getPicFile().getPath() + "#"
                                 + vacantContentPanel.getTxt_DURL().getText()
                 );
+
+                reloadListPanel();
+                MainActivity.loggerRun.getLogger().info("添加了番剧：" + vacantContentPanel.txtF_DName.getText());
+                //这两个必须在最后，否则其他语句不起作用
                 container.remove(vacantContentPanel);
                 vacantContentPanel = null;
-                reloadListPanel();
-                MainActivity.loggerRun.getLogger().info("添加了番剧："+vacantContentPanel.txtF_DName.getText());
             }
 
             public void mousePressed(MouseEvent e) {
@@ -298,6 +301,7 @@ public class MainFrame extends JFrame implements ConstValues {
 
     /**
      * 构建侧边条目窗口
+     *
      * @param dramaInfo List<String>番剧信息集合
      */
     public void buildListPanel(List<String> dramaInfo) {

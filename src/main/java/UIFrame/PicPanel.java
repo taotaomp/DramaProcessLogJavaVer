@@ -51,7 +51,7 @@ public class PicPanel extends JPanel {
                 JFileChooser jFileChooser = new JFileChooser();
                 if (jFileChooser.showOpenDialog(null) == JFileChooser.APPROVE_OPTION) {
                     temp.setPicFile(jFileChooser.getSelectedFile());
-                    temp.repaint(300);
+                    temp.repaint();
                 }
             }
 
